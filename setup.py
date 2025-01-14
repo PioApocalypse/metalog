@@ -1,11 +1,11 @@
-import setuptools
+from setuptools import setup, find_packages
 
 from metalog._version import __version__
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-setuptools.setup(
+setup(
     name="metalog",
     version=__version__,
     author="Mirco Panighel",
@@ -15,10 +15,11 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/rescipy-project/metalog",
     license="MIT",
-    packages=setuptools.find_packages(),
+    packages=find_packages(),
     install_requires=[
         "elabapy",
         "streamlit",
+        "python-dateutil",
     ],
     classifiers=[
         "Development Status :: 4 - Beta",
